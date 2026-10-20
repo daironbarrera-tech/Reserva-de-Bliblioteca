@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Biblioteca Central · Reservas y préstamos</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views.css">
+
+  <!-- Librerías externas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.4.0/jsQR.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="toast"></div>
+  <dialog id="dlg"></dialog>
+
+  <!-- El orden importa: comparten ámbito global -->
+  <script src="js/config.js"></script>
+  <script src="js/data/seed.js"></script>
+  <script src="js/core/utils.js"></script>
+  <script src="js/core/store.js"></script>
+
+  <script src="js/services/qr.js"></script>
+  <script src="js/services/library.js"></script>
+  <script src="js/services/auth.js"></script>
+  <script src="js/services/camera.js"></script>
+
+  <script src="js/components/header.js"></script>
+
+  <script src="js/views/auth.js"></script>
+  <script src="js/views/catalog.js"></script>
+  <script src="js/views/student/my-reservations.js"></script>
+  <script src="js/views/student/ticket.js"></script>
+  <script src="js/views/librarian/scanner.js"></script>
+  <script src="js/views/librarian/loans.js"></script>
+  <script src="js/views/librarian/inventory.js"></script>
+  <script src="js/views/librarian/stats.js"></script>
+
+  <script src="js/core/router.js"></script>
+  <script src="js/services/claude-sync.js"></script> <!-- opcional -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* Estilos específicos de cada vista (catálogo, ticket QR, escáner) */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  margin-top: 34px;
+}
+
+@media (max-width:900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--ln);
+  cursor: pointer;
+}
+
+.cov {
+  width: 80px;
+  height: 112px;
+  border-radius: 14px;
+  background: var(--cd);
+  display: grid;
+  place-items: center;
+  font: 11px 'Space Mono',monospace;
+  color: var(--mu);
+  flex: none;
+}
+
+.row>div:last-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.row h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+
+.side {
+  background: var(--cd);
+  border-radius: 26px;
+  padding: 28px;
+  align-self: start;
+  position: sticky;
+  top: 16px;
+}
+
+.tkt {
+  background: var(--cd);
+  border: 1px solid var(--ln);
+  border-radius: 22px;
+  padding: 26px;
+  text-align: center;
+  transform: rotate(2deg);
+  max-width: 340px;
+  margin: auto;
+}
+
+.tkt .q {
+  background: #fff;
+  padding: 10px;
+  display: inline-block;
+  margin: 12px 0;
+}
+
+.tkt .q svg {
+  display: block;
+  width: 210px;
+  height: 210px;
+}
+
+@media (max-width:800px) {
+  .two {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.scan {
+  border: 2px dashed var(--gr);
+  border-radius: 24px;
+  padding: 34px;
+  text-align: center;
+  margin: 22px 0;
+}
+
+.scan input {
+  width: 100%;
+  max-width: 520px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--ln);
+  background: var(--bg);
+  color: var(--fg);
+  font: 18px 'Space Mono',monospace;
+  text-align: center;
+}
+

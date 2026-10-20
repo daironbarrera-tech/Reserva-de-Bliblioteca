@@ -1,0 +1,166 @@
+/* Variables, reset, tipografía y estructura general */
+
+:root {
+  --bg: #f2ebdf;
+  --fg: #17140f;
+  --mu: #7a7468;
+  --ln: #d6cfc0;
+  --cd: #e5dfd1;
+  --gr: #1d6b46;
+  --rd: #9b2323;
+  --am: #b07a0c;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top,0px);
+  padding-bottom: env(safe-area-inset-bottom,0px);
+}
+
+@media (prefers-color-scheme:dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #16150f;
+    --fg: #f0eadc;
+    --mu: #9d9786;
+    --ln: #33302a;
+    --cd: #24221b;
+    --gr: #2f8a5f;
+    --rd: #c0443e;
+    --am: #a8730a;
+  }
+}
+
+html {
+  height: 100%;
+  scroll-padding-top: env(safe-area-inset-top,0px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px 'Space Grotesk',system-ui,sans-serif;
+}
+
+.mono {
+  font-family: 'Space Mono',ui-monospace,monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 5vw;
+  border-bottom: 1px solid var(--ln);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.logo i {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--gr);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.logo b {
+  display: block;
+  line-height: 1.1;
+}
+
+.logo small {
+  font: 11px 'Space Mono',monospace;
+  letter-spacing: .1em;
+  color: var(--mu);
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  color: var(--mu);
+  flex-wrap: wrap;
+}
+
+nav a:hover, nav a.on {
+  color: var(--fg);
+}
+
+main {
+  padding: 36px 5vw 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.eye {
+  font: 700 12px 'Space Mono',monospace;
+  letter-spacing: .2em;
+  color: var(--gr);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(38px,7vw,68px);
+  line-height: 1;
+  margin: 12px 0;
+  letter-spacing: -.03em;
+}
+
+h2 {
+  margin: 0;
+}
+
+p.s {
+  color: var(--mu);
+  max-width: 560px;
+  line-height: 1.5;
+}
+
+.mu {
+  color: var(--mu);
+}
+
+.sm {
+  font-size: 14px;
+}
+
+.no {
+  color: var(--rd);
+}
+
+.wa {
+  color: var(--am);
+}
+
+.gy {
+  color: var(--mu);
+}
+
+footer {
+  border-top: 1px solid var(--ln);
+  padding: 22px 5vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--mu);
+  font-size: 14px;
+}
+
